@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Axis Finance — Welcome On-board Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* =====================================================================
+     DESIGN TOKENS — extracted from welcome format.docx
+     ===================================================================== */
+  :root{
+    --brand-maroon:      #981C4E;   /* banner / footer band, sampled from source JPEG */
+    --brand-maroon-line: #9C3865;   /* icon outline / accent text, sampled from icon strokes */
+    --page-bg:           #DDDDDD;   /* grey letter background */
+    --text-dark:         #1A1A1A;
+    --white:             #FFFFFF;
+
+    --font-heading: 'Poppins', 'Century Gothic', 'Trebuchet MS', sans-serif; /* closest web-safe match to the
+                                                                                 rounded bold-italic headline face —
+                                                                                 exact original font could not be
+                                                                                 identified from the flattened image */
+    --font-body:    'Open Sans', 'Calibri', 'Segoe UI', Arial, sans-serif;   /* document default is Calibri
+                                                                                 (theme minorHAnsi); Open Sans used
+                                                                                 as the closest freely-licensed web
+                                                                                 substitute, matched size-for-size */
+
+    --page-width:  210mm;  /* A4 portrait — matches source (2480 x 3508 px @ 300dpi) */
+    --page-height: 297mm;
+
+    --gutter: 9.2mm;       /* left/right content margin, measured from source */
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; background:#efefef; font-family:var(--font-body); color:var(--text-dark); }
+
+  /* =====================================================================
+     PAGE FRAME
+     ===================================================================== */
+  .page{
+    position: relative;
+    width: var(--page-width);
+    min-height: var(--page-height);
+    margin: 24px auto;
+    background: var(--page-bg);
+    overflow: hidden;
+    box-shadow: 0 0 14px rgba(0,0,0,0.25);
+  }
+
+  /* =====================================================================
+     PAGE 1 — HERO PHOTO + WELCOME BANNER
+     ===================================================================== */
+  .hero{ position: relative; width:100%; }
+  .hero-photo{ display:block; width:100%; height:auto; }
+
+  .banner-wrap{
+    position:absolute;
+    left: 28%;
+    bottom: -9mm;
+    width: 44%;
+  }
+  .banner-outline{
+    position:absolute;
+    top:4mm; left:4mm;
+    width:100%; height:100%;
+    border: 1.2px solid var(--brand-maroon);
+    z-index:1;
+  }
+  .banner{
+    position:relative;
+    z-index:2;
+    background: var(--brand-maroon);
+    border: 1.2px solid var(--brand-maroon);
+    padding: 6px 18px 10px;
+    text-align:center;
+  }
+  .banner h1{
+    margin:0;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 800;
+    color: var(--white);
+    font-size: clamp(22px, 4.4vw, 34px);
+    letter-spacing: 0.5px;
+  }
+
+  /* =====================================================================
+     PAGE 1 — BODY CONTENT
+     ===================================================================== */
+  .content{
+    padding: 15mm var(--gutter) 4mm;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+  .content p{ margin: 0 0 9px; }
+  .content [contenteditable="true"]{ outline: none; }
+  .content [contenteditable="true"]:hover{ background: rgba(152,28,78,0.06); }
+  .content [contenteditable="true"]:focus{ background: rgba(152,28,78,0.12); box-shadow: 0 0 0 1px var(--brand-maroon); }
+
+  .field{
+    font-weight: 700;
+    border-bottom: 1px dashed transparent;
+  }
+  .field:hover, .field:focus{ border-bottom-color: var(--brand-maroon); }
+
+  .benefits-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 18px;
+    margin: 4px 0 14px;
+  }
+  .benefit{ display:flex; align-items:center; gap:10px; }
+  .icon-circle{
+    flex: 0 0 auto;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    border: 1.3px solid var(--brand-maroon-line);
+    display:flex; align-items:center; justify-content:center;
+    background: transparent;
+    overflow: hidden;
+  }
+  .icon-circle img{ width: 100%; height: 100%; object-fit: contain; }
+  .icon-circle svg{ width: 60%; height: 60%; }
+  .benefit p{ margin:0; font-size:12.5px; }
+
+  .contact-row{
+    display:flex;
+    align-items:center;
+    gap: 26px;
+    flex-wrap: wrap;
+    margin: 6px 0 14px;
+  }
+  .contact-item{ display:flex; align-items:center; gap:10px; font-size:12.5px; }
+  .contact-item .icon-circle{ width:38px; height:38px; }
+
+  /* =====================================================================
+     FOOTER BAND (shared shape, both pages)
+     ===================================================================== */
+  .footer{
+    position: relative;
+    height: 26mm;
+    background: var(--white) url('assets/icons/footer-band.jpg') center / 100% 100% no-repeat;
+    margin-top: 6mm;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding-right: 8mm;
+  }
+  .footer-logo{ height: 11mm; width:auto; position:relative; z-index:1; }
+
+  .disclaimer{
+    font-size: 8.2px;
+    line-height:1.4;
+    color: var(--text-dark);
+    padding: 6px var(--gutter) 10px;
+    font-style: italic;
+  }
+
+  /* =====================================================================
+     PAGE BREAK BETWEEN THE TWO LETTER PAGES
+     ===================================================================== */
+  .page-break{ height:1px; }
+  @media print{
+    .page-break{ page-break-after: always; height:0; }
+    .page{ box-shadow:none; margin:0; }
+    body{ background: var(--white); }
+  }
+  @page{ size: A4 portrait; margin: 0; }
+
+  /* =====================================================================
+     PAGE 2 — CODE OF CONDUCT
+     ===================================================================== */
+  .coc-header{
+    background: var(--brand-maroon);
+    color: var(--white);
+    padding: 10mm var(--gutter) 6mm;
+    border-bottom: 3px solid #8a8a8a;
+  }
+  .coc-header h2{
+    margin:0 0 4px;
+    font-family: var(--font-heading);
+    font-weight: 700; font-style: normal;
+    font-size: 24px;
+  }
+  .coc-header p{ margin:0; font-size:13px; font-style: italic; font-weight:400; }
+
+  .coc-body{ padding: 4mm var(--gutter) 0; }
+  .coc-row{
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap: 10px;
+    padding: 8px 46px 10px 4px;
+    margin-bottom: 4px;
+    border-radius: 999px 0 0 999px / 40px 0 0 40px;
+  }
+  .coc-row.grey{ background: #e4e4e4; }
+  .coc-row.white{ background: transparent; }
+  .coc-row-text{ flex: 1 1 auto; }
+  .coc-row h3{
+    margin: 0 0 4px;
+    color: var(--brand-maroon);
+    font-family: var(--font-heading);
+    font-style: italic; font-weight:700;
+    font-size: 13.5px;
+  }
+  .coc-row h4{
+    margin: 6px 0 2px;
+    font-style: italic; font-weight:700; font-size:11.5px;
+  }
+  .coc-row ul{ margin: 0 0 4px; padding-left: 14px; font-size: 10.6px; line-height:1.45; }
+  .two-col-wrap{ display:flex; gap: 18px; margin: 0 0 4px; }
+  .two-col-wrap ul{ flex: 1 1 0; margin:0; padding-left: 14px; font-size: 10.6px; line-height:1.45; }
+  .coc-row li{ margin-bottom:2px; }
+  .coc-row li em{ font-style: italic; }
+  .coc-row li strong{ color: var(--brand-maroon-line); font-weight:700; }
+  .coc-row .row-icon{
+    flex: 0 0 auto;
+    width: 44px; height:44px;
+    align-self:center;
+  }
+  .coc-row .row-icon img{ width:100%; height:100%; object-fit: contain; }
+
+  .coc-qr-row{
+    display:flex; align-items:center; justify-content:center;
+    gap: 22px;
+    padding: 10mm var(--gutter) 4mm;
+    font-size: 12.5px;
+    text-align: center;
+  }
+  .coc-qr-row strong{ color: var(--brand-maroon); }
+  .coc-qr-row .divider{ width:1px; height:44px; background:#b7b7b7; }
+  .coc-qr-row img{ width: 68px; height:68px; }
+
+  .coc-disclaimer{
+    text-align:center;
+    font-size: 9px;
+    font-style: italic;
+    line-height:1.5;
+    padding: 0 var(--gutter) 8mm;
+  }
+
+  /* =====================================================================
+     PRINT NOTE (hidden when printing)
+     ===================================================================== */
+  .screen-note{
+    max-width: var(--page-width);
+    margin: 0 auto 12px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    background:#fff3cd;
+    border:1px solid #e0c069;
+    border-radius:4px;
+    padding:8px 12px;
+  }
+  @media print{ .screen-note{ display:none; } }
+</style>
+</head>
+<body>
+
+<!-- <div class="screen-note">
+  Editable fields: click directly on the vendor name or partner code below to edit in place
+  (they're plain <code>contenteditable</code> text — no template syntax). All other paragraph
+  text is editable the same way. Use your browser's Print → Save as PDF for a print-accurate copy.
+</div> -->
+
+<!-- ============================= PAGE 1 ============================= -->
+<div class="page page-1">
+
+  <div class="hero">
+    <img class="hero-photo" src="assets/icons/header-photo.jpg" alt="Axis Finance — welcome banner photo">
+    <div class="banner-wrap">
+      <div class="banner-outline"></div>
+      <div class="banner"><h1>Welcome On-board !</h1></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p contenteditable="true">Dear <span class="field" contenteditable="true" data-field="VENDOR_NAME">MONEYOLOGY SERVICES PRIVATE LIMITED</span>,</p>
+    <p contenteditable="true">Welcome to <strong>Axis Finance Limited!</strong></p>
+    <p contenteditable="true">We are delighted to have you as part of our Axis family, and we are here to support you every step of the way.</p>
+    <p contenteditable="true">Your partner code is <span class="field" contenteditable="true" data-field="VENDOR_CODE">AFLR4239</span>, which you can use for all your future interactions with us.</p>
+    <p contenteditable="true">As our valued partner, you'll enjoy a <strong>range of benefits</strong>, including:</p>
+
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="icon-circle">
+            <svg width="100%" height="100%" version="1.1" role="img" aria-label="Faster payouts icon" viewBox="0 0 122.88 122.88" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#9C3865" d="M81.61,4.73c0-2.61,2.58-4.73,5.77-4.73c3.19,0,5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73c-3.19,0-5.77-2.12-5.77-4.73V4.73L81.61,4.73z M66.11,103.81c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,103.81z M15.85,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,67.09z M40.98,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98L40.98,67.09z M66.11,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,67.09z M91.25,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0.27,1.77,0,3.2-0.61,3.2H91.25L91.25,67.09z M15.85,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0.27,1.77,0,3.2-0.61,3.2H15.85L15.85,85.45z M40.98,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0.27,1.77,0,3.2-0.61,3.2H40.98L40.98,85.45z M66.11,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.27,3.2c-0.27,1.77-0.27,3.2-0.61,3.2H66.11L66.11,85.45z M91.25,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H91.25L91.25,85.45z M15.85,103.81c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0.27,1.77,0,3.2-0.61,3.2H15.85L15.85,103.81z M40.98,103.81c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98L40.98,103.81z M29.61,4.73c0-2.61,2.58-4.73,5.77-4.73s5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73s-5.77-2.12-5.77-4.73V4.73L29.61,4.73z M6.4,45.32h110.07V21.47c0-0.8-0.33-1.53-0.86-2.07c-0.53-0.53-1.26-0.86-2.07-0.86H103c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h10.55c2.57,0,4.9,1.05,6.59,2.74c1.69,1.69,2.74,4.02,2.74,6.59v27.06v65.03c0,2.57-1.05,4.9-2.74,6.59c-1.69,1.69-4.02,2.74-6.59,2.74H9.33c-2.57,0-4.9-1.05-6.59-2.74C1.05,118.45,0,116.12,0,113.55V48.52V21.47c0-2.57,1.05-4.9,2.74-6.59c1.69-1.69,4.02-2.74,6.59-2.74H20.6c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H9.33c-0.8,0-1.53,0.33-2.07,0.86c-0.53,0.54-0.86,1.26-0.86,2.07V45.32L6.4,45.32z M116.48,51.73H6.4v61.82c0,0.8,0.33,1.53,0.86,2.07c0.53,0.8,1.26,0.86,2.07,0.86h104.22c0.8,0,1.53-0.33,2.07-0.86c0.53-0.86,0.86-1.26,0.86-2.07V51.73L116.48,51.73z M50.43,18.54c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h21.49c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H50.43L50.43,18.54z"/>
+            </svg>
+        </div>
+        <p contenteditable="true">Faster Payouts on the 5<sup>th</sup> of Each Month</p>
+      </div>
+
+      <div class="benefit">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_invoice.png" alt="Digital invoice icon">
+        </div>
+        <p contenteditable="true">Digital Invoice Submission</p>
+      </div>
+
+      <div class="benefit">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_dashboard.png" alt="Performance dashboard icon">
+        </div>
+        <p contenteditable="true">Business &amp; Service Performance Dashboards</p>
+      </div>
+
+      <div class="benefit">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_portal.png" alt="Partner portal icon">
+        </div>
+        <p contenteditable="true">Access to an Exclusive Partner Portal</p>
+      </div>
+    </div>
+
+    <p contenteditable="true">We're confident that our customized services will bring significant benefits to you.</p>
+    <p contenteditable="true">If you have any queries, you may reach out to our support team, <strong>a dedicated desk for resolving our Channel Partner queries:</strong></p>
+
+    <div class="contact-row">
+      <!-- <div class="contact-item">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_phone.png" alt="Phone icon">
+        </div>
+        <span contenteditable="true">022 62260039</span>
+      </div>
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_mobile.png" alt="Mobile icon">
+        </div>
+        <span contenteditable="true">9167044440</span>
+      </div> -->
+      <div class="contact-item">
+        <div class="icon-circle">
+          <img src="assets/icons/icon_email.png" alt="Email icon">
+        </div>
+        <span contenteditable="true">partner.support@axisfinance.in</span>
+      </div>
+    </div>
+
+    <p contenteditable="true">Thank you for choosing Axis Finance Limited. We look forward to a successful and enduring partnership.</p>
+    <p contenteditable="true">Warm regards,<br>Axis Finance Limited</p>
+  </div>
+
+  <div class="footer">
+    <!-- <img class="footer-logo" src="assets/icons/Axis-Finance-Logo.png" alt="Axis Finance"> -->
+  </div>
+  <div class="disclaimer" contenteditable="true">*T&amp;C Apply. Loans at the sole discretion of Axis Finance Limited&nbsp; I&nbsp; Users are advised to use the data/information available in this communication for the purpose of information only and rely on their own judgment while making any decisions.</div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============================= PAGE 2 ============================= -->
+<div class="page page-2">
+
+  <div class="coc-header">
+    <h2 contenteditable="true">Axis Finance – Code of Conduct</h2>
+    <p contenteditable="true">Guidelines to Ethical Conduct &amp; Best Practices</p>
+  </div>
+
+  <div class="coc-body">
+
+    <div class="coc-row grey">
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Tele-calling Protocols:</h3>
+        <h4 contenteditable="true">When to Call:</h4>
+        <ul contenteditable="true">
+          <li>Contact prospects only if they have <strong>shown interest</strong> or consented via approved channels of Axis Finance</li>
+          <li>Calling hours: <strong>0930 Hrs to 1900 Hrs</strong> <em>(unless otherwise requested)</em></li>
+        </ul>
+        <h4 contenteditable="true">Privacy Respect:</h4>
+        <ul contenteditable="true">
+          <li>Discuss the prospect's interest <strong>directly</strong> with them or with others explicitly <strong>authorized by the prospect</strong></li>
+          <li>Customer flagged in "Do Not Disturb" (DND) list should not be contacted</li>
+        </ul>
+      </div>
+      <div class="row-icon">
+        <img src="assets/icons/icon_headset.png" alt="Tele-calling icon">
+      </div>
+    </div>
+
+    <div class="coc-row white">
+      <div class="row-icon">
+        <img src="assets/icons/icon_people.png" alt="Communication guidelines icon">
+      </div>
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Communication Guidelines:</h3>
+        <ul contenteditable="true">
+          <li><strong>Initial Contact:</strong> First contact must be <em>over a call</em>; if unavailable, <strong>leave a clear and concise message</strong></li>
+          <li><strong>Follow-Up:</strong> Restrict follow-up calls to those who have not explicitly declined further communication</li>
+          <li><strong>Transparency:</strong> Clearly <strong>identify yourself, your affiliation, and the call's purpose</strong>. Misleading statements or misrepresentations are strictly prohibited</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="coc-row grey">
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Ethics and Integrity:</h3>
+        <ul contenteditable="true">
+          <li><strong>Gifts and Bribes:</strong> Strictly <strong>prohibited</strong> to accept any gifts or bribes</li>
+          <li><strong>Misrepresentation:</strong> Avoid <strong>false representations</strong> about Axis Finance or its products</li>
+          <li><strong>Commitments:</strong> Do not make <strong>unauthorized commitments</strong> on behalf of Axis Finance</li>
+        </ul>
+      </div>
+      <div class="row-icon">
+        <img src="assets/icons/icon_scale.png" alt="Ethics and integrity icon">
+      </div>
+    </div>
+
+    <div class="coc-row white">
+      <div class="row-icon">
+        <img src="assets/icons/icon_call.png" alt="Post-call etiquette icon">
+      </div>
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Post-Call Etiquette:</h3>
+        <ul contenteditable="true">
+          <li>Provide feedback to Axis Finance on customers' preferences and their 'DND' status</li>
+          <li>Direct any queries about sold products to <strong>Customer Service team</strong> at Axis Finance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="coc-row grey">
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Field Visits Protocol:</h3>
+        <div class="two-col-wrap">
+          <ul contenteditable="true">
+            <li>Maintain appropriate distance</li>
+            <li>Limit to one BDE and one supervisor if necessary</li>
+          </ul>
+          <ul contenteditable="true">
+            <li>Do not enter personal spaces <strong>without consent</strong></li>
+            <li><strong>Ensure privacy</strong> and limit discussion to business matters only</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row-icon">
+        <img src="assets/icons/icon_pin.png" alt="Field visits icon">
+      </div>
+    </div>
+
+    <div class="coc-row white">
+      <div class="row-icon">
+        <img src="assets/icons/icon_tux.png" alt="Appearance and dress code icon">
+      </div>
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Appearance and Dress Code:</h3>
+        <ul contenteditable="true">
+          <li><strong>Men:</strong> Well-ironed trousers and shirts, preferably with sleeves buttoned down</li>
+          <li><strong>Women:</strong> Well-ironed formal attire such as saree or suit, ensuring a well-groomed appearance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="coc-row grey">
+      <div class="coc-row-text">
+        <h3 contenteditable="true">Documentation Handling:</h3>
+        <ul contenteditable="true">
+          <li>Ensure all communications are in the <strong>format approved by Axis Finance</strong>, maintaining professional standards</li>
+        </ul>
+      </div>
+      <div class="row-icon">
+        <img src="assets/icons/icon_doc.png" alt="Documentation handling icon">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="coc-qr-row">
+    <div contenteditable="true">Scan QR code to visit<br><strong>Axis Finance Partner Portal</strong></div>
+    <img src="assets/icons/qr-partner-portal.jpg" alt="QR code — Axis Finance Partner Portal">
+    <div class="divider"></div>
+    <div contenteditable="true">Email at<br><strong>partner.support@axisfinance.in</strong></div>
+  </div>
+
+  <p class="coc-disclaimer" contenteditable="true">Axis Finance Code of Conduct applies to all individuals and entities involved in the marketing and distribution of any Axis Finance products.<br>Non-compliance may lead to blacklisting and termination of business relations.</p>
+
+  <div class="footer">
+    <!-- <img class="footer-logo" src="assets/icons/Axis-Finance-Logo.png" alt="Axis Finance"> -->
+  </div>
+  <div class="disclaimer" contenteditable="true">*T&amp;C Apply</div>
+</div>
+
+</body>
+</html>
