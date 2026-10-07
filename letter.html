@@ -1,352 +1,462 @@
 <!doctype html>
 <html>
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-  <body style="margin:0; padding:0; background:#efefef; font-family:'Open Sans','Calibri','Segoe UI',Arial,sans-serif; color:#1A1A1A;">
 
-    <style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        .icon-circle {
-          width: 46px;
-          height: 46px;
-          border-radius: 50%;
-          border: 1.3px solid #9C3865;
-          text-align: center;
-          vertical-align: middle;
-          background: transparent;
-          overflow: hidden;
-        }
+<body
+	style="margin:0; padding:0; background:#efefef; font-family:'Open Sans','Calibri','Segoe UI',Arial,sans-serif; color:#1A1A1A;">
 
-        .welcome-banner-frame {
-            position: relative;
-            isolation: isolate;
-        }
+	<style>
+		.icon-circle {
+			width: 46px;
+			height: 46px;
+			border-radius: 50%;
+			border: 1.3px solid #9C3865;
+			text-align: center;
+			vertical-align: middle;
+			background: transparent;
+			overflow: hidden;
+		}
 
-        .welcome-banner-frame::before {
-            content: "";
-            position: absolute;
-            inset: 18px -18px -18px 18px;
-            border: 1px solid #e60050;
-            z-index: -1;
-        }
+		.welcome-banner-frame {
+			position: relative;
+			isolation: isolate;
+		}
 
-    </style>
+		.welcome-banner-frame::before {
+			content: "";
+			position: absolute;
+			inset: 18px -18px -18px 18px;
+			border: 1px solid #e60050;
+			z-index: -1;
+		}
+	</style>
 
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#efefef;">
-      <tr>
-        <td align="center" style="padding:24px 10px;">
-          <table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:700px; background:#dedede;">
+	<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#efefef;">
+		<tr>
+			<td align="center" style="padding:24px 10px;">
+				<table role="presentation" width="700" cellpadding="0" cellspacing="0" border="0"
+					style="width:100%; max-width:700px; background:#dedede;">
 
-            <!-- ============================= PAGE 1 : HERO + BANNER ============================= -->
-            <tr>
-              <td style="position:relative; padding:0;">
-                <img src="assets/icons/header-photo.jpg" width="700" alt="Axis Finance — welcome banner photo" style="display:block; width:100%; height:auto; border:0;">
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="padding:0; background:transparent; position:relative; z-index:1;">
-                <table class="welcome-banner-frame" role="presentation" cellpadding="0" cellspacing="0" border="0" style="position:relative; z-index:2; margin:-24px auto 0;">
-                  <tr>
-                    <td style="padding:4px 0 0 4px;">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="position:relative; z-index:1; border:1.2px solid #981C4E; margin:-4px 0 0 -4px;">
-                        <tr>
-                          <td style="border:1.2px solid #981C4E; background:#981C4E; padding:8px 26px 12px; text-align:center;">
-                            <span style="font-family:'Poppins','Century Gothic','Trebuchet MS',sans-serif; font-style:italic; font-weight:800; color:#ffffff; font-size:26px; letter-spacing:0.5px;">Welcome On-board !</span>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+					<!-- ============================= PAGE 1 : HERO + BANNER ============================= -->
+					<tr>
+						<td style="position:relative; padding:0;">
+							<img src="assets/icons/header-photo.jpg" width="700"
+								alt="Axis Finance — welcome banner photo"
+								style="display:block; width:100%; height:auto; border:0;">
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="padding:0; background:transparent; position:relative; z-index:1;">
+							<table class="welcome-banner-frame" role="presentation" cellpadding="0" cellspacing="0"
+								border="0" style="position:relative; z-index:2; margin:-24px auto 0;">
+								<tr>
+									<td style="padding:4px 0 0 4px;">
+										<table role="presentation" cellpadding="0" cellspacing="0" border="0"
+											style="position:relative; z-index:1; border:1.2px solid #981C4E; margin:-4px 0 0 -4px;">
+											<tr>
+												<td
+													style="border:1.2px solid #981C4E; background:#981C4E; padding:8px 26px 12px; text-align:center;">
+													<span
+														style="font-family:'Poppins','Century Gothic','Trebuchet MS',sans-serif; font-style:italic; font-weight:800; color:#ffffff; font-size:26px; letter-spacing:0.5px;">Welcome
+														On-board !</span>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
 
-            <!-- ============================= PAGE 1 : LETTER BODY ============================= -->
-            <tr>
-              <td style="padding:26px 34px 6px; font-size:12.5px; line-height:1.55;">
-                <p style="margin:0 0 12px;">Dear <strong>{VENDOR_NAME}</strong>,</p>
-                <p style="margin:0 0 12px;">Welcome to <strong>Axis Finance Limited!</strong></p>
-                <p style="margin:0 0 12px;">We are delighted to have you as part of our Axis family, and we are here to support you every step of the way.</p>
-                <p style="margin:0 0 12px;">Your partner code is <strong>{VENDOR_CODE}</strong>, which you can use for all your future interactions with us.</p>
-                <p style="margin:0 0 12px;">As our valued partner, you'll enjoy a <strong>range of benefits</strong>, including:</p>
-              </td>
-            </tr>
+					<!-- ============================= PAGE 1 : LETTER BODY ============================= -->
+					<tr>
+						<td style="padding:26px 34px 6px; font-size:12.5px; line-height:1.55;">
+							<p style="margin:0 0 12px;">Dear <strong>{VENDOR_NAME}</strong>,</p>
+							<p style="margin:0 0 12px;">Welcome to <strong>Axis Finance Limited!</strong></p>
+							<p style="margin:0 0 12px;">We are delighted to have you as part of our Axis family, and we
+								are here to support you every step of the way.</p>
+							<p style="margin:0 0 12px;">Your partner code is <strong>{VENDOR_CODE}</strong>, which you
+								can use for all your future interactions with us.</p>
+							<p style="margin:0 0 12px;">As our valued partner, you'll enjoy a <strong>range of
+									benefits</strong>, including:</p>
+						</td>
+					</tr>
 
-            <!-- Benefits grid (2x2) -->
-            <tr>
-              <td style="padding:0 34px 10px;">
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                  <tr>
-                    <td width="50%" valign="middle" style="padding:8px;">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td class="icon-circle">
-                            <img src="assets/icons/icon-faster-payouts.png" width="28" height="28" alt="" style="display:inline-block; vertical-align:middle; border:0;">
-                          </td>
-                          <td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">Faster Payouts on the 5th of Each Month</td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td width="50%" valign="middle" style="padding:8px;">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td class="icon-circle">
-                            <img src="assets/icons/icon-digital-invoice.png" width="28" height="28" alt="" style="display:inline-block; vertical-align:middle; border:0;">
-                          </td>
-                          <td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">Digital Invoice Submission</td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="50%" valign="middle" style="padding:8px;">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td class="icon-circle">
-                            <img src="assets/icons/icon-performance-dashboard.png" width="28" height="28" alt="" style="display:inline-block; vertical-align:middle; border:0;">
-                          </td>
-                          <td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">Business &amp; Service Performance Dashboards</td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td width="50%" valign="middle" style="padding:8px;">
-                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td class="icon-circle">
-                            <img src="assets/icons/icon-partner-portal.png" width="28" height="28" alt="" style="display:inline-block; vertical-align:middle; border:0;">
-                          </td>
-                          <td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">Access to an Exclusive Partner Portal</td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+					<!-- Benefits grid (2x2) -->
+					<tr>
+						<td style="padding:0 34px 10px;">
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td width="50%" valign="middle" style="padding:8px;">
+										<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+											<tr>
+												<td class="icon-circle">
+													<img src="assets/icons/icon-faster-payouts.png" width="28"
+														height="28" alt=""
+														style="display:inline-block; vertical-align:middle; border:0;">
+												</td>
+												<td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">
+													Faster Payouts on the 5th of Each Month</td>
+											</tr>
+										</table>
+									</td>
+									<td width="50%" valign="middle" style="padding:8px;">
+										<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+											<tr>
+												<td class="icon-circle">
+													<img src="assets/icons/icon-digital-invoice.png" width="28"
+														height="28" alt=""
+														style="display:inline-block; vertical-align:middle; border:0;">
+												</td>
+												<td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">
+													Digital Invoice Submission</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td width="50%" valign="middle" style="padding:8px;">
+										<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+											<tr>
+												<td class="icon-circle">
+													<img src="assets/icons/icon-performance-dashboard.png" width="28"
+														height="28" alt=""
+														style="display:inline-block; vertical-align:middle; border:0;">
+												</td>
+												<td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">
+													Business &amp; Service Performance Dashboards</td>
+											</tr>
+										</table>
+									</td>
+									<td width="50%" valign="middle" style="padding:8px;">
+										<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+											<tr>
+												<td class="icon-circle">
+													<img src="assets/icons/icon-partner-portal.png" width="28"
+														height="28" alt=""
+														style="display:inline-block; vertical-align:middle; border:0;">
+												</td>
+												<td style="font-size:12.5px; line-height:1.4; padding-left: 10px;">
+													Access to an Exclusive Partner Portal</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
 
-            <tr>
-              <td style="padding:6px 34px 6px; font-size:12.5px; line-height:1.55;">
-                <p style="margin:0 0 12px;">We're confident that our customized services will bring significant benefits to you.</p>
-                <p style="margin:0 0 8px;">If you have any queries, you may reach out to our support team, <strong>a dedicated desk for resolving our Channel Partner queries:</strong></p>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:0 34px 14px;">
-                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                  <tr>
-                    <td class="icon-circle">
-                      <img src="assets/icons/icon-email.png" width="28" height="28" alt="" style="display:inline-block; vertical-align:middle; border:0;">
-                    </td>
-                    <td style="font-size:12.5px; padding-left: 10px;">partner.support@axisfinance.in</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:0 34px 20px; font-size:12.5px; line-height:1.55;">
-                <p style="margin:0 0 12px;">Thank you for choosing Axis Finance Limited. We look forward to a successful and enduring partnership.</p>
-                <p style="margin:0;">Warm regards,<br>Axis Finance Limited</p>
-              </td>
-            </tr>
+					<tr>
+						<td style="padding:6px 34px 6px; font-size:12.5px; line-height:1.55;">
+							<p style="margin:0 0 12px;">We're confident that our customized services will bring
+								significant benefits to you.</p>
+							<p style="margin:0 0 8px;">If you have any queries, you may reach out to our support team,
+								<strong>a dedicated desk for resolving our Channel Partner queries:</strong></p>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding:0 34px 14px;">
+							<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td class="icon-circle">
+										<img src="assets/icons/icon-email.png" width="28" height="28" alt=""
+											style="display:inline-block; vertical-align:middle; border:0;">
+									</td>
+									<td style="font-size:12.5px; padding-left: 10px;">partner.support@axisfinance.in
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding:0 34px 20px; font-size:12.5px; line-height:1.55;">
+							<p style="margin:0 0 12px;">Thank you for choosing Axis Finance Limited. We look forward to
+								a successful and enduring partnership.</p>
+							<p style="margin:0;">Warm regards,<br>Axis Finance Limited</p>
+						</td>
+					</tr>
 
-            <!-- Footer band 1 -->
-            <tr>
-              <td style="padding:0;">
-                <img src="assets/icons/footer-band.jpg" width="700" alt="Axis Finance" style="display:block; width:100%; height:auto; border:0;">
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:10px 34px 24px; font-size:8.2px; font-style:italic; line-height:1.4; color:#1A1A1A;">
-                *T&amp;C Apply. Loans at the sole discretion of Axis Finance Limited &nbsp;I&nbsp; Users are advised to use the data/information available in this communication for the purpose of information only and rely on their own judgment while making any decisions.
-              </td>
-            </tr>
+					<!-- Footer band 1 -->
+					<tr>
+						<td style="padding:0;">
+							<img src="assets/icons/footer-band.jpg" width="700" alt="Axis Finance"
+								style="display:block; width:100%; height:auto; border:0;">
+						</td>
+					</tr>
+					<tr>
+						<td
+							style="padding:10px 34px 24px; font-size:8.2px; font-style:italic; line-height:1.4; color:#1A1A1A;">
+							*T&amp;C Apply. Loans at the sole discretion of Axis Finance Limited &nbsp;I&nbsp; Users are
+							advised to use the data/information available in this communication for the purpose of
+							information only and rely on their own judgment while making any decisions.
+						</td>
+					</tr>
 
-            <!-- ============================= PAGE 2 : CODE OF CONDUCT ============================= -->
-            <tr>
-              <td style="background:#981C4E; padding:20px 34px 14px; border-bottom:3px solid #8a8a8a;">
-                <h2 style="margin:0 0 6px; font-family:'Poppins','Century Gothic','Trebuchet MS',sans-serif; font-weight:700; font-size:24px; color:#ffffff;">Axis Finance – Code of Conduct</h2>
-                <p style="margin:0; font-size:13px; font-style:italic; color:#ffffff;">Guidelines to Ethical Conduct &amp; Best Practices</p>
-              </td>
-            </tr>
+					<!-- ============================= PAGE 2 : CODE OF CONDUCT ============================= -->
+					<tr>
+						<td style="background:#981C4E; padding:20px 34px 14px; border-bottom:3px solid #8a8a8a;">
+							<h2
+								style="margin:0 0 6px; font-family:'Poppins','Century Gothic','Trebuchet MS',sans-serif; font-weight:700; font-size:24px; color:#ffffff;">
+								Axis Finance – Code of Conduct</h2>
+							<p style="margin:0; font-size:13px; font-style:italic; color:#ffffff;">Guidelines to Ethical
+								Conduct &amp; Best Practices</p>
+						</td>
+					</tr>
 
-            <tr>
-              <td style="padding:16px 34px 0;">
+					<tr>
+						<td style="padding:16px 34px 0;">
 
-                <!-- Row: Tele-calling Protocols -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
-                  <tr>
-                    <td style="padding:14px 16px 14px 20px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Tele-calling Protocols:</h3>
-                      <p style="margin:6px 0 2px; font-style:italic; font-weight:700; font-size:12px;">When to Call:</p>
-                      <ul style="margin:0 0 6px; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li>Contact prospects only if they have <strong>shown interest</strong> or consented via approved channels of Axis Finance</li>
-                        <li>Calling hours: <strong>0930 Hrs to 1900 Hrs</strong> <em>(unless otherwise requested)</em></li>
-                      </ul>
-                      <p style="margin:6px 0 2px; font-style:italic; font-weight:700; font-size:12px;">Privacy Respect:</p>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li>Discuss the prospect's interest <strong>directly</strong> with them or with others explicitly <strong>authorized by the prospect</strong></li>
-                        <li>Customer flagged in "Do Not Disturb" (DND) list should not be contacted</li>
-                      </ul>
-                    </td>
-                    <td width="52" style="padding-right:16px;" valign="middle">
-                      <img src="assets/icons/icon-tele-calling.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Tele-calling Protocols -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
+								<tr>
+									<td style="padding:14px 16px 14px 20px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Tele-calling Protocols:</h3>
+										<p
+											style="margin:6px 0 2px; font-style:italic; font-weight:700; font-size:12px;">
+											When to Call:</p>
+										<ul style="margin:0 0 6px; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li>Contact prospects only if they have <strong>shown interest</strong> or
+												consented via approved channels of Axis Finance</li>
+											<li>Calling hours: <strong>0930 Hrs to 1900 Hrs</strong> <em>(unless
+													otherwise requested)</em></li>
+										</ul>
+										<p
+											style="margin:6px 0 2px; font-style:italic; font-weight:700; font-size:12px;">
+											Privacy Respect:</p>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li>Discuss the prospect's interest <strong>directly</strong> with them or
+												with others explicitly <strong>authorized by the prospect</strong></li>
+											<li>Customer flagged in "Do Not Disturb" (DND) list should not be contacted
+											</li>
+										</ul>
+									</td>
+									<td width="52" style="padding-right:16px;" valign="middle">
+										<img src="assets/icons/icon-tele-calling.png" width="42" height="42" alt=""
+											style="display:block; border:0;">
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Communication Guidelines -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
-                  <tr>
-                    <td width="52" style="padding-right:12px;" valign="middle">
-                      <img src="assets/icons/icon-communication-guidelines.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                    <td style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Communication Guidelines:</h3>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li><strong>Initial Contact:</strong> First contact must be <em>over a call</em>; if unavailable, <strong>leave a clear and concise message</strong></li>
-                        <li><strong>Follow-Up:</strong> Restrict follow-up calls to those who have not explicitly declined further communication</li>
-                        <li><strong>Transparency:</strong> Clearly <strong>identify yourself, your affiliation, and the call's purpose</strong>. Misleading statements or misrepresentations are strictly prohibited</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Communication Guidelines -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="margin-bottom:10px;">
+								<tr>
+									<td width="52" style="padding-right:12px;" valign="middle">
+										<img src="assets/icons/icon-communication-guidelines.png" width="42" height="42"
+											alt="" style="display:block; border:0;">
+									</td>
+									<td
+										style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Communication Guidelines:</h3>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li><strong>Initial Contact:</strong> First contact must be <em>over a
+													call</em>; if unavailable, <strong>leave a clear and concise
+													message</strong></li>
+											<li><strong>Follow-Up:</strong> Restrict follow-up calls to those who have
+												not explicitly declined further communication</li>
+											<li><strong>Transparency:</strong> Clearly <strong>identify yourself, your
+													affiliation, and the call's purpose</strong>. Misleading statements
+												or misrepresentations are strictly prohibited</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Ethics and Integrity -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
-                  <tr>
-                    <td style="padding:14px 16px 14px 20px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Ethics and Integrity:</h3>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li><strong>Gifts and Bribes:</strong> Strictly <strong>prohibited</strong> to accept any gifts or bribes</li>
-                        <li><strong>Misrepresentation:</strong> Avoid <strong>false representations</strong> about Axis Finance or its products</li>
-                        <li><strong>Commitments:</strong> Do not make <strong>unauthorized commitments</strong> on behalf of Axis Finance</li>
-                      </ul>
-                    </td>
-                    <td width="52" style="padding-right:16px;" valign="middle">
-                      <img src="assets/icons/icon-ethics-and-integrity.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Ethics and Integrity -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
+								<tr>
+									<td style="padding:14px 16px 14px 20px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Ethics and Integrity:</h3>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li><strong>Gifts and Bribes:</strong> Strictly <strong>prohibited</strong>
+												to accept any gifts or bribes</li>
+											<li><strong>Misrepresentation:</strong> Avoid <strong>false
+													representations</strong> about Axis Finance or its products</li>
+											<li><strong>Commitments:</strong> Do not make <strong>unauthorized
+													commitments</strong> on behalf of Axis Finance</li>
+										</ul>
+									</td>
+									<td width="52" style="padding-right:16px;" valign="middle">
+										<img src="assets/icons/icon-ethics-and-integrity.png" width="42" height="42"
+											alt="" style="display:block; border:0;">
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Post-Call Etiquette -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
-                  <tr>
-                    <td width="52" style="padding-right:12px;" valign="middle">
-                      <img src="assets/icons/icon-post-call-etiquette.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                    <td style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Post-Call Etiquette:</h3>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li>Provide feedback to Axis Finance on customers' preferences and their 'DND' status</li>
-                        <li>Direct any queries about sold products to <strong>Customer Service team</strong> at Axis Finance</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Post-Call Etiquette -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="margin-bottom:10px;">
+								<tr>
+									<td width="52" style="padding-right:12px;" valign="middle">
+										<img src="assets/icons/icon-post-call-etiquette.png" width="42" height="42"
+											alt="" style="display:block; border:0;">
+									</td>
+									<td
+										style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Post-Call Etiquette:</h3>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li>Provide feedback to Axis Finance on customers' preferences and their
+												'DND' status</li>
+											<li>Direct any queries about sold products to <strong>Customer Service
+													team</strong> at Axis Finance</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Field Visits Protocol -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
-                  <tr>
-                    <td style="padding:14px 16px 14px 20px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Field Visits Protocol:</h3>
-                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td width="50%" valign="top">
-                            <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                              <li>Maintain appropriate distance</li>
-                              <li>Limit to one BDE and one supervisor if necessary</li>
-                            </ul>
-                          </td>
-                          <td width="50%" valign="top">
-                            <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                              <li>Do not enter personal spaces <strong>without consent</strong></li>
-                              <li><strong>Ensure privacy</strong> and limit discussion to business matters only</li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td width="52" style="padding-right:16px;" valign="middle">
-                      <img src="assets/icons/icon-field-visits.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Field Visits Protocol -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="background:#eaedf1; border-radius:24px; margin-bottom:10px;">
+								<tr>
+									<td style="padding:14px 16px 14px 20px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Field Visits Protocol:</h3>
+										<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+											border="0">
+											<tr>
+												<td width="50%" valign="top">
+													<ul
+														style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+														<li>Maintain appropriate distance</li>
+														<li>Limit to one BDE and one supervisor if necessary</li>
+													</ul>
+												</td>
+												<td width="50%" valign="top">
+													<ul
+														style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+														<li>Do not enter personal spaces <strong>without
+																consent</strong></li>
+														<li><strong>Ensure privacy</strong> and limit discussion to
+															business matters only</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td width="52" style="padding-right:16px;" valign="middle">
+										<img src="assets/icons/icon-field-visits.png" width="42" height="42" alt=""
+											style="display:block; border:0;">
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Appearance and Dress Code -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
-                  <tr>
-                    <td width="52" style="padding-right:12px;" valign="middle">
-                      <img src="assets/icons/icon-appearance-and-dress-code.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                    <td style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Appearance and Dress Code:</h3>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li><strong>Men:</strong> Well-ironed trousers and shirts, preferably with sleeves buttoned down</li>
-                        <li><strong>Women:</strong> Well-ironed formal attire such as saree or suit, ensuring a well-groomed appearance</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Appearance and Dress Code -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="margin-bottom:10px;">
+								<tr>
+									<td width="52" style="padding-right:12px;" valign="middle">
+										<img src="assets/icons/icon-appearance-and-dress-code.png" width="42"
+											height="42" alt="" style="display:block; border:0;">
+									</td>
+									<td
+										style="border:1.5px solid #d3d7dc; border-radius:24px; padding:14px 20px 14px 16px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Appearance and Dress Code:</h3>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li><strong>Men:</strong> Well-ironed trousers and shirts, preferably with
+												sleeves buttoned down</li>
+											<li><strong>Women:</strong> Well-ironed formal attire such as saree or suit,
+												ensuring a well-groomed appearance</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
 
-                <!-- Row: Documentation Handling -->
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#eaedf1; border-radius:24px; margin-bottom:16px;">
-                  <tr>
-                    <td style="padding:14px 16px 14px 20px;">
-                      <h3 style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">Documentation Handling:</h3>
-                      <ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
-                        <li>Ensure all communications are in the <strong>format approved by Axis Finance</strong>, maintaining professional standards</li>
-                      </ul>
-                    </td>
-                    <td width="52" style="padding-right:16px;" valign="middle">
-                      <img src="assets/icons/icon-documentation-handling.png" width="42" height="42" alt="" style="display:block; border:0;">
-                    </td>
-                  </tr>
-                </table>
+							<!-- Row: Documentation Handling -->
+							<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+								style="background:#eaedf1; border-radius:24px; margin-bottom:16px;">
+								<tr>
+									<td style="padding:14px 16px 14px 20px;">
+										<h3
+											style="margin:0 0 4px; color:#981C4E; font-style:italic; font-weight:700; font-size:14px;">
+											Documentation Handling:</h3>
+										<ul style="margin:0; padding-left:16px; font-size:11px; line-height:1.5;">
+											<li>Ensure all communications are in the <strong>format approved by Axis
+													Finance</strong>, maintaining professional standards</li>
+										</ul>
+									</td>
+									<td width="52" style="padding-right:16px;" valign="middle">
+										<img src="assets/icons/icon-documentation-handling.png" width="42" height="42"
+											alt="" style="display:block; border:0;">
+									</td>
+								</tr>
+							</table>
 
-              </td>
-            </tr>
+						</td>
+					</tr>
 
-            <!-- QR code row -->
-            <tr>
-              <td style="padding:12px 34px 6px; text-align:center;">
-                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
-                  <tr>
-                    <td style="font-size:12.5px; text-align:center; padding-right:20px;">Scan QR code to visit<br><strong style="color:#981C4E;">Axis Finance Partner Portal</strong></td>
-                    <td style="width:1px; background:#b7b7b7; font-size:0; line-height:0;">&nbsp;</td>
-                    <td style="padding-left:20px;">
-                      <img src="assets/icons/qr-partner-portal.png" width="68" height="68" alt="QR code — Axis Finance Partner Portal" style="display:block;">
-                    </td>
-                    <td style="width:1px; background:#b7b7b7; font-size:0; line-height:0;">&nbsp;</td>
-                    <td style="font-size:12.5px; text-align:center; padding-left:20px;">Email at<br><strong style="color:#981C4E;">partner.support@axisfinance.in</strong></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:10px 34px 20px; text-align:center; font-size:9px; font-style:italic; line-height:1.5;">
-                Axis Finance Code of Conduct applies to all individuals and entities involved in the marketing and distribution of any Axis Finance products.<br>Non-compliance may lead to blacklisting and termination of business relations.
-              </td>
-            </tr>
+					<!-- QR code row -->
+					<tr>
+						<td style="padding:12px 34px 6px; text-align:center;">
+							<table role="presentation" cellpadding="0" cellspacing="0" border="0"
+								style="margin:0 auto;">
+								<tr>
+									<td style="font-size:12.5px; text-align:center; padding-right:20px;">Scan QR code to
+										visit<br><strong style="color:#981C4E;">Axis Finance Partner Portal</strong>
+									</td>
+									<td style="width:1px; background:#b7b7b7; font-size:0; line-height:0;">&nbsp;</td>
+									<td style="padding-left:20px;">
+										<img src="assets/icons/qr-partner-portal.png" width="68" height="68"
+											alt="QR code — Axis Finance Partner Portal" style="display:block;">
+									</td>
+									<td style="width:1px; background:#b7b7b7; font-size:0; line-height:0;">&nbsp;</td>
+									<td style="font-size:12.5px; text-align:center; padding-left:20px;">Email
+										at<br><strong style="color:#981C4E;">partner.support@axisfinance.in</strong>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td
+							style="padding:10px 34px 20px; text-align:center; font-size:9px; font-style:italic; line-height:1.5;">
+							Axis Finance Code of Conduct applies to all individuals and entities involved in the
+							marketing and distribution of any Axis Finance products.<br>Non-compliance may lead to
+							blacklisting and termination of business relations.
+						</td>
+					</tr>
 
-            <!-- Footer band 2 -->
-            <tr>
-              <td style="padding:0;">
-                <img src="assets/icons/footer-band.jpg" width="700" alt="Axis Finance" style="display:block; width:100%; height:auto; border:0;">
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:10px 34px 24px; font-size:8.2px; font-style:italic; line-height:1.4; color:#1A1A1A;">
-                *T&amp;C Apply. Loans at the sole discretion of Axis Finance Limited &nbsp;I&nbsp; Users are advised to use the data/information available in this communication for the purpose of information only and rely on their own judgment while making any decisions.
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:0 34px 24px; text-align:center; font-size:12px; color:#777777;">
-                This is an automated email. Please do not reply to this message.
-              </td>
-            </tr>
+					<!-- Footer band 2 -->
+					<tr>
+						<td style="padding:0;">
+							<img src="assets/icons/footer-band.jpg" width="700" alt="Axis Finance"
+								style="display:block; width:100%; height:auto; border:0;">
+						</td>
+					</tr>
+					<tr>
+						<td
+							style="padding:10px 34px 24px; font-size:8.2px; font-style:italic; line-height:1.4; color:#1A1A1A;">
+							*T&amp;C Apply. Loans at the sole discretion of Axis Finance Limited &nbsp;I&nbsp; Users are
+							advised to use the data/information available in this communication for the purpose of
+							information only and rely on their own judgment while making any decisions.
+						</td>
+					</tr>
+					<tr>
+						<td style="padding:0 34px 24px; text-align:center; font-size:12px; color:#777777;">
+							This is an automated email. Please do not reply to this message.
+						</td>
+					</tr>
 
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+
 </html>
